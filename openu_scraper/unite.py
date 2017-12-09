@@ -1,13 +1,12 @@
 from __future__ import unicode_literals, absolute_import, print_function
-from contextlib import suppress
 
-import os
 import itertools
+import os
 import subprocess
 
 import logbook
 
-from artistworks_downloader.constants import LOG_PATH
+from openu_scraper.constants import LOG_PATH
 
 __author__ = 'Omer'
 

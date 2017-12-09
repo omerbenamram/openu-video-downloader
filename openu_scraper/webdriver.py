@@ -2,7 +2,6 @@ from __future__ import unicode_literals, absolute_import
 
 import re
 import time
-from collections import OrderedDict
 from enum import Enum
 from typing import List
 from urllib.error import URLError
@@ -14,7 +13,7 @@ from capybara.dsl import Page
 from retry import retry
 from selenium.common.exceptions import WebDriverException
 
-from openu_scraper.artistworks_downloader.constants import OPENU_VIDEO_COLLECTION_TEMPLATE
+from openu_scraper.constants import OPENU_VIDEO_COLLECTION_TEMPLATE
 from .constants import LOG_PATH, OPENU_LOGIN_PAGE
 
 logger = logbook.Logger(__name__)

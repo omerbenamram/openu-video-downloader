@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 from pathlib import Path
 
-from openu_scraper.artistworks_downloader.webdriver import extract_all_video_ids_from_source
+from openu_scraper.webdriver import extract_all_video_ids_from_source
 
 
 @pytest.fixture

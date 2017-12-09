@@ -3,10 +3,9 @@ from pathlib import Path
 import pytest
 import yaml
 from capybara.dsl import Page
-from capybara.node.element import Element
-from selenium.common.exceptions import StaleElementReferenceException
 
-from openu_scraper.artistworks_downloader.webdriver import login_to_openu
+from openu_scraper.constants import OPENU_LOGIN_PAGE
+from openu_scraper.webdriver import login_to_openu
 
 @pytest.fixture
 def creds():
@@ -25,5 +24,7 @@ def password(creds):
 def nid(creds):
     return creds['nid']
 
-def test_login():
-    login_to_openu()
+def test_login(page: Page, username, password, nid):
+    # will raise if login fails
+    login_to_openu(page, username, password, nid)
+

@@ -4,3 +4,5 @@
 *creds.yml
 
 \.cache/v/cache/
+
+openu_scraper\.egg-info/

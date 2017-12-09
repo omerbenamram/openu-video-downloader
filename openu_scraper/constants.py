@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import tempfile
 
+OPENU_HOME = 'https://opal.openu.ac.il/'
 OPENU_LOGIN_PAGE = 'https://sso.apps.openu.ac.il/SheiltaPortalLogin?T_PLACE=https://sheilta.apps.openu.ac.il/pls/dmyopt2/sheilta.main'
 
 MAX_CONCURRENT_DOWNLOADS = 5
