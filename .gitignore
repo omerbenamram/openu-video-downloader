@@ -2,3 +2,5 @@
 *.pyc
 
 *creds.yml
+
+\.cache/v/cache/
