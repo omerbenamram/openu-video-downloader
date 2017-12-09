@@ -15,5 +15,5 @@ setup(
         ],
     },
     install_requires=['selenium', 'logbook', 'aiohttp', 'tqdm', 'pyvirtualdisplay', 'm3u8',
-              'requests', 'retry', 'm3u8', 'capybara-py', 'beautifulsoup4', 'pytest']
+                      'requests', 'retry', 'm3u8', 'capybara-py', 'beautifulsoup4', 'pytest', 'PyYAML']
 )

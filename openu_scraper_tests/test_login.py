@@ -4,8 +4,8 @@ import pytest
 import yaml
 from capybara.dsl import Page
 
-from openu_scraper.constants import OPENU_LOGIN_PAGE
 from openu_scraper.webdriver import login_to_openu
+
 
 @pytest.fixture
 def creds():
