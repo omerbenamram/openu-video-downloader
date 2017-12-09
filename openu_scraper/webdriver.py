@@ -42,7 +42,7 @@ def login_to_openu(page: Page, username, password, nid):
     nid_input.send_keys(nid)
 
     page.click_button('כניסה >')
-    assert page.has_current_path('https://sheilta.apps.openu.ac.il/pls/dmyopt2/myop.myop_screen'), "Login Failed"
+    assert page.current_url == 'https://sheilta.apps.openu.ac.il/pls/dmyopt2/myop.myop_screen', "Login Failed"
 
 
 def get_lesson_by_id(self, lesson_id):
@@ -157,7 +157,7 @@ def _handle_playlist(playlist_link):
 def get_all_video_ids_for_course(page: Page, collection_id: int):
     logger.info(f'Grabbing all links for video collection {collection_id}')
     page.visit(OPENU_VIDEO_COLLECTION_TEMPLATE.format(collection_id=collection_id))
-    return extract_all_video_ids_from_source(BeautifulSoup(page.source), 'lxml')
+    return extract_all_video_ids_from_source(BeautifulSoup(page.source,  'lxml'))
 
 def extract_all_video_ids_from_source(soup: BeautifulSoup) -> List[int]:
     lessons = soup.find_all('div', id=re.compile('playlist\d+'))
